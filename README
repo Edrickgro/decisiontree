@@ -1,0 +1,18 @@
+1. Final :D
+
+2. Destroying my will to live is a favorite past time. Hence, I used arrays as the basic data structure for the project. The important
+thing I had in mind when deciding on this was calculating the number of positive and negative calculations along with the proportions of
+every value within a certain attribute. The first step of this can be found in my getInfo helper method. Essentially, I made an ArrayList
+composed of other ArrayLists (2d). There is a row for each value. Each row contains a subset of examples that have such value. getInfo also
+keeps track of how many examples each value has which is then added last and used to calculate proportion. The array that getInfo returns
+is used by getImportance to calculate the maximum information gain. getImportance also uses getEntropy and calcRemainder (which in turns used the getLog method)
+to do all the math. getImportance then finds the maximum information and returns the attribute associated with such value.
+
+getFClass calculates the most frequent classification from parent data. subSet creates a subset of examples that hold a particular value. It uses
+the helper method getCapacity to get the number of attributes and also calculates the number of examples. It uses these values to create a new array
+with the perfect capacity for the subset. This prevents subsets from having Null values. Myid3Algorithm uses recursion to create the tree
+and finds the best attribute until it reaches the base case (all examples have same classification which is checked by calculating entropy to be 0).
+
+3. The data for the tree is created but the graphics part is kinda wonky. It sometimes only shoes one node with its classifications.
+
+4. My tests were basic and tested simple math and methods within my algorithm that were essential to making sure it worked.
